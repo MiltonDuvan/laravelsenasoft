@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>Conoce</b>POPAYÁN',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -255,17 +255,17 @@ return [
         ],
         ['header' => 'account_settings'],
         [
-            'text' => 'profile',
+            'text' => 'Perfil',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
-            'text' => 'change_password',
+            'text' => 'Cambiar contraseña',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
         ],
         [
-            'text'    => 'multilevel',
+            'text'    => 'Multi Cauca 🇨🇴',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
                 [
@@ -295,6 +295,25 @@ return [
                             ],
                         ],
                     ],
+                ],
+                [
+                    'text' => 'level_one',
+                    'url'  => '#',
+                ],
+            ],
+        ],
+        [
+            'text'    => 'Multi SITES 🚩',
+            'icon'    => 'fas fa-fw fa-share',
+            'submenu' => [
+                [
+                    'text' => 'Insertar sitio ⚙',
+                    'url'  => '#',
+                ],
+                [
+                    'text'    => 'Consultar 🗝',
+                    'url'     => '#',
+                   
                 ],
                 [
                     'text' => 'level_one',
