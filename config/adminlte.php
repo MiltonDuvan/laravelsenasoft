@@ -248,7 +248,7 @@ return [
         ],
         [
             'text'        => 'pages',
-            'url'         => 'admin/pages',
+            'url'         => '',
             'icon'        => 'far fa-fw fa-file',
             'label'       => 4,
             'label_color' => 'success',
@@ -308,7 +308,7 @@ return [
             'submenu' => [
                 [
                     'text' => 'Insertar sitio ⚙',
-                    'url'  => '#',
+                    'route'  => 'service.create',
                 ],
                 [
                     'text'    => 'Consultar 🗝',

@@ -3,7 +3,7 @@
 @section('title', 'Formulario para sitios')
 
 @section('content_header')
-    <h1>Registro Sitios</h1>
+    <h1>Turismo Popayan</h1>
 @stop
 
 @section('content')

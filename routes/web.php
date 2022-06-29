@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,4 +19,8 @@ Route::get('/', function () {
     return view('layout.layout');
 });
 
-Route::resource('services',ServiceController::class);
+//Rutas para servicio
+
+Route::resource('service',ServiceController::class);
+
+Route::resource('site',SiteController::class);

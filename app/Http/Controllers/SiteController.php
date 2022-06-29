@@ -14,7 +14,8 @@ class SiteController extends Controller
      */
     public function index()
     {
-        //
+        $sites=Site::simplePaginate(4);
+        return view('sites.index',compact('sites'));
     }
 
     /**
