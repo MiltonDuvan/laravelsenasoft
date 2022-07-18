@@ -34,11 +34,11 @@
 
             <div class="col-md-6 col-lg-6 col-sm-12">
                 <label class="text-uppercase">Seleccione Sitio</label><br>
-                <select name="sitio_id" class="form-control">
 
+                <select name="sitio_id" class="form-control">
                     <option selected="true" disabled="disable">Seleccione sitio </option>
                     @foreach ($sitios as $sitio)
-                        <option value="{{ $sitio->id }}">{{ $sitio->nombre }}</option>
+                        <option value="{{ $sitio->id }}">{{ $sitio->municipio}}</option>
                     @endforeach
                 </select>
                 <small class="text-danger">{{ $errors->first('sitio') }}</small>

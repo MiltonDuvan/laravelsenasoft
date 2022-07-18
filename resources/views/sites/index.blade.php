@@ -18,10 +18,9 @@
                   ...
                 </thead>
                 <tbody>
-                    @foreach ($sites as $site)
+                    @foreach ($sitio as $site)
                   <th scope="row">{{$site->id}}</th>
-
-                    <td>{{$site->municipio}}</td>
+                  <td>{{$site->municipio}}</td>
                     <td>{{$site->lugar}}</td>
                     <td>{{$site->nombre}}</td>
                     <td>{{$site->direccion}}</td>

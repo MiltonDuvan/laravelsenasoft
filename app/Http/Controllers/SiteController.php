@@ -14,7 +14,7 @@ class SiteController extends Controller
      */
     public function index()
     {
-        $sites=Site::simplePaginate(4);
+        $sites=Site::simplePaginate(2);
         return view('sites.index',compact('sites'));
     }
 
@@ -25,7 +25,7 @@ class SiteController extends Controller
      */
     public function create()
     {
-        //
+        return view('sites.create');
     }
 
     /**
@@ -36,7 +36,35 @@ class SiteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $vali=request()->validate([
+            'municipio'=>'required',
+            'lugar'=>'required', 
+            'direccion'=>'required',
+            'telefono'=>'required',
+            'correo'=>'required',
+            'foto'=>'required',
+            'descripcion'=>'required',
+            'tipo_actividad'=>'required',
+            'horario_atencion'=>'required',
+            'estado'=>'required'
+        ]);
+
+            if(isset($vali)){
+                $sitio=new Site();
+                $sitio->municipio= $request->municipio;
+                $sitio->lugar= $request->lugar;
+                $sitio->direccion=$request->direccion;
+                $sitio->telefono=$request->telefono;
+                $sitio->correo=$request->correo;
+                $sitio->foto=$request->foto;
+                $sitio->descripcion=$request->descripcion;
+                $sitio->tipo_actividad=$request->tipo_actividad;
+                $sitio->horario_atencion=$request->horario_atencion;
+                $sitio->estado=$request->estado;
+                $sitio->save();
+                session()->flash('message', 'Sito Succesfull!!');
+                return redirect()->route('site.create');
+            }
     }
 
     /**

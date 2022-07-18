@@ -265,58 +265,35 @@ return [
             'icon' => 'fas fa-fw fa-lock',
         ],
         [
-            'text'    => 'Multi Cauca 🇨🇴',
+            'text'    => 'Multi  Sitios',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Insertar sitio',
+                    'url'  => 'site/create',
                 ],
+                
                 [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
+                    'text' => 'Consultar sitio',
                     'url'  => '#',
                 ],
             ],
         ],
         [
-            'text'    => 'Multi SITES 🚩',
+            'text'    => 'Multi Servicios 🚩',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
                 [
-                    'text' => 'Insertar sitio ⚙',
+                    'text' => 'Insertar servicio ⚙',
                     'route'  => 'service.create',
                 ],
                 [
-                    'text'    => 'Consultar 🗝',
+                    'text'    => 'Consultar servicio 🗝',
                     'url'     => '#',
                    
                 ],
                 [
-                    'text' => 'level_one',
+                    'text' => 'Lorems',
                     'url'  => '#',
                 ],
             ],
