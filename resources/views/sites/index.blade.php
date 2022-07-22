@@ -1,57 +1,75 @@
 @extends('adminlte::page')
 
-@section('title', 'Formulario para sitios')
+@section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>Turismo Popayan</h1>
+    <h1>sitios</h1>
 @stop
 
 @section('content')
-    <div class="card">
-        <div class="card-body">
-           
-                
-           
-            <table class="table table-dark">
-               
-                <thead>
-                  ...
-                </thead>
-                <tbody>
-                    @foreach ($sitio as $site)
-                  <th scope="row">{{$site->id}}</th>
-                  <td>{{$site->municipio}}</td>
-                    <td>{{$site->lugar}}</td>
-                    <td>{{$site->nombre}}</td>
-                    <td>{{$site->direccion}}</td>
-                    <td>{{$site->telefono}}</td>
-                    <td>{{$site->correo}}</td>
-                    <td>
-                        <div class="imagen d-flex flex-wrap " >
-                            <img class="img-fluid" src="{{asset('img/'.$site->foto)}}"alt="" width="100px">
-                        </div>
-                    </td>
-                    di
-                    <td><div class="d-flex flex-wrap" style="font-size:1rem; width:400px">{{$site->descripcion}}</div></td>
-                    <td>{{$site->tipo_actividad}}</td>
-                    <td>{{$site->horario_atencion}}</td>
-                    <td>{{$site->estado}}</td>
 
-                  </tr>
-                  @endforeach
-                </tbody>
-              </table>
-            {{$sites->links()}}
-        </div>
-     
+
+<div class="container-fluid">
+<div class="row">
+
+<table cellspacing="0" width="100%" class="table table-bordered table-responsive display compact no-wrap">
+    <thead>
+        <tr id="chargedaysheader">
+            <th width="60%" class="headcol" rowspan="2" style="width: 30%;color: white; clear: both; table-layout: fixed; text-align: center; vertical-align: middle; background-color: #0094ff;">#id</th>
+        </tr>
+        <tr id="chargelegendheader">
+            
+                <th scope="col">municipio</th>
+                <th scope="col">sitio</th>
+                <th scope="col">direccion</th>
+                <th scope="col">telefono</th>
+                <th scope="col">correo</th>
+                <th scope="col">imagen</th>
+                <th scope="col">descripcion</th>
+                <th scope="col">tipo_actividad</th>
+                <th scope="col">horario_atencion</th>
+                <th scope="col">estado</th>
+        </tr>
+    </thead>
+    <tbody id="chargetabledata">
+        <tr>
+           @foreach($sites as $site)
+           <tr>
+               <th class="fijar" scope="row">{{$site->id}}</th>
+               <td>{{$site->municipio}}</td>
+               <td>{{$site->lugar}}</td>
+               <td>{{$site->direccion}}</td>
+               <td>{{$site->telefono}}</td>
+               <td>{{$site->correo}}</td>
+               <td>
+                <div class="imagen" class="d-flex flex-wrap" style="font-size: 1rem; width:600px heigth:300px">
+                   
+                    <img src="{{asset("img/".$site->foto)}}" alt="a" width="500px">
+                </div>
+                   
+                </td>
+               <td class=""><div class="d-flex flex-wrap" style="font-size: 1rem; width:400px">
+                  {{$site->descripcion}}
+                   </div>
+               </td>
+               <td>{{$site->tipo_actividad}}</td>
+               <td>{{$site->horario_atencion}}</td>
+               <td>{{$site->estado}}</td>
+             </tr>
+           @endforeach
+         
+        </tr>
+    </tbody>
+</table>
+<section class="mx-5">
+    {{$sites->links()}}
+</section>
+</div>
+</div>
 @stop
 
 @section('css')
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-<!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="/css/admin_custom.css">
 @stop
 
 @section('js')

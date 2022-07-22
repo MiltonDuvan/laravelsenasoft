@@ -22,5 +22,4 @@ Route::get('/', function () {
 //Rutas para servicio
 
 Route::resource('service',ServiceController::class);
-
 Route::resource('site',SiteController::class);

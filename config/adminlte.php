@@ -270,12 +270,12 @@ return [
             'submenu' => [
                 [
                     'text' => 'Insertar sitio',
-                    'url'  => 'site/create',
+                    'route'  => 'site.create',
                 ],
                 
                 [
                     'text' => 'Consultar sitio',
-                    'url'  => '#',
+                    'route'  => 'site.index',
                 ],
             ],
         ],

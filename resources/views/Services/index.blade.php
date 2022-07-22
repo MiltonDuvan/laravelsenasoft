@@ -1,9 +1,9 @@
-@extends('adminlte::page')
+{{-- @extends('adminlte::page')
 
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>sitios</h1>
+    <h1>Servicios</h1>
 @stop
 
 @section('content')
@@ -75,4 +75,4 @@
 
 @section('js')
     <script> console.log('Hi!'); </script>
-@stop
+@stop --}}
